@@ -1,22 +1,13 @@
-# My Project Name
+## Gram-Schmidt Process
 
-## Description
-Briefly describe your project or website here. Explain its purpose, features, or any relevant information.
+The Gram-Schmidt process is a method for orthonormalizing a set of vectors. Given a set of linearly independent vectors \( \mathbf{v}_1, \mathbf{v}_2, \ldots, \mathbf{v}_n \), the orthonormalized vectors \( \mathbf{u}_1, \mathbf{u}_2, \ldots, \mathbf{u}_n \) are computed as follows:
 
-## Table of Contents
-- [Installation](#installation)
-- [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
+\[ \begin{align*}
+\mathbf{u}_1 &= \mathbf{v}_1 \\
+\mathbf{u}_2 &= \mathbf{v}_2 - \frac{\langle \mathbf{v}_2, \mathbf{u}_1 \rangle}{\lVert \mathbf{u}_1 \rVert^2} \mathbf{u}_1 \\
+\mathbf{u}_3 &= \mathbf{v}_3 - \frac{\langle \mathbf{v}_3, \mathbf{u}_1 \rangle}{\lVert \mathbf{u}_1 \rVert^2} \mathbf{u}_1 - \frac{\langle \mathbf{v}_3, \mathbf{u}_2 \rangle}{\lVert \mathbf{u}_2 \rVert^2} \mathbf{u}_2 \\
+&\vdots \\
+\mathbf{u}_n &= \mathbf{v}_n - \sum_{i=1}^{n-1} \frac{\langle \mathbf{v}_n, \mathbf{u}_i \rangle}{\lVert \mathbf{u}_i \rVert^2} \mathbf{u}_i
+\end{align*} \]
 
-## Installation
-Provide instructions on how to install or set up your project locally, if applicable. Include any dependencies or prerequisites.
-
-## Usage
-Explain how to use your project or website. Provide examples, screenshots, or demo links if available.
-
-## Contributing
-If you'd like others to contribute to your project, outline guidelines for contributing here. This could include information about how to report bugs, suggest new features, or submit pull requests.
-
-## License
-Specify the license under which your project is distributed. You can choose from various open source licenses like MIT, Apache, GPL, etc. Include a link to the full license text.
+Where \( \langle \mathbf{v}, \mathbf{u} \rangle \) represents the inner product of vectors \( \mathbf{v} \) and \( \mathbf{u} \), and \( \lVert \mathbf{u} \rVert \) denotes the norm of vector \( \mathbf{u} \).
